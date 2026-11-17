@@ -10,14 +10,26 @@ The Part A write-up (two suggested core features) is in [PART_A.md](PART_A.md).
 
 ## Run it
 
-Requires Node 22.13 or newer, because it uses the built-in `node:sqlite`.
+You need **Node.js 22.13 or newer**, because the app uses Node's built-in `node:sqlite`. Check with `node -v`.
 
 ```bash
+git clone https://github.com/DSCmatter/Discover_tab.git
+cd Discover_tab
 npm install
-npm run dev        # http://localhost:3000
-npm run verify     # typecheck + lint + tests
-npm run reset      # wipe swipes to replay the demo
+npm run dev
 ```
+
+Then open http://localhost:3000.
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server on port 3000 |
+| `npm run verify` | Run the typecheck, lint and all tests |
+| `npm test` | Run the tests only |
+| `npm run build` then `npm start` | Production build and server |
+| `npm run reset` | Clear saved swipes and matches to replay the demo (stop the server first) |
+
+**On your phone.** Run `npm run dev` on your laptop, then open `http://<your-laptop-ip>:3000` on a phone on the same Wi-Fi.
 
 **Demo tip.** These seeded profiles already like you, so liking them triggers "It's a match!": Kabir, Ishita, Aditya, Myra, Pari, Tara, Arnav and Neel. Their order in the deck is unrelated to whether they like you.
 
